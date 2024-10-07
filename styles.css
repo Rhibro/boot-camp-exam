@@ -3,3 +3,177 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    font-family: 'Baloo 2';
+    text-shadow:  2px 2px 2px rgb(40, 39, 39);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url(images/pink-dogs-smaller.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    /* background-attachment: fixed; */
+}
+
+header {
+    background-color: #5b0367;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav-list li {
+    margin-left: 1rem;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Main Styles */
+
+main {
+    flex-grow: 1;
+}
+
+.gridcontainer {
+    min-height: 90%;
+    min-width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    grid-auto-rows: repeat(4, 1fr);
+    margin: 1rem;
+}
+
+.card {
+    font-size: clamp(3rem 4rem 5rem);
+    margin: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(250, 250, 250);
+    border-radius: 20px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.cardtext {
+    top: 50%;
+    left: 50%;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.cardOne {
+    grid-area: 1 / 1 / 2 / 2 ;
+    background-color: rgb(93,158,192);
+}
+
+.cardTwo {
+    grid-area: 1 / 2 / 2 / 2 ;
+    background-color: rgb(230,217,79);
+}
+
+.cardThree {
+    grid-area: 1 / 3 / 2 / 3;
+    background-color: rgb(1,196,128);
+}
+
+.cardFour {
+    grid-area: 1 / 4 / 2 / 4;
+    background-color: rgb(87,69,135);
+}
+
+/* Footer Styles */
+
+footer {
+    background-color: #5b0367;
+    color: white;
+    padding: 1rem;
+    margin-top: auto; /* This pushes the footer to the bottom */
+}
+
+@media screen and (max-width: 768px) {
+    .nav-list {
+        position: fixed;
+        left: 0;
+        top: -100%; /* Start off-screen above */
+        background-color: #5b0367;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        transition: top 0.5s ease-in;
+        padding: 1rem 0;
+    }
+
+    .nav-list li {
+        opacity: 0;
+        margin: 1rem 0;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+.nav-active {
+    top: 0; /* Slide down to top of page */
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
