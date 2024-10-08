@@ -14,7 +14,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center bottom;
-    /* background-attachment: fixed; */
 }
 
 /* Header Styles */
@@ -47,6 +46,10 @@ header {
     text-decoration: none;
 }
 
+a:hover {
+    color: #ca63d8;
+}
+
 .burger {
     display: none;
     cursor: pointer;
@@ -57,11 +60,35 @@ header {
     height: 3px;
     background-color: white;
     margin: 5px;
-    transition: all 0.3s ease;
+    transition: all 0.1s ease;
 }
 
 main {
     flex-grow: 1;
+}
+
+/* Home Styles */
+
+.indexBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.headercontainer {
+    background-color: #5b0367;
+    opacity: 90%;
+    height: 20rem;
+    width: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+
+.indexHead {
+    font-size: 80px;
 }
 
 /* Adopt Styles */
@@ -89,7 +116,6 @@ main {
 
 .card {
     background-color: #5b0367;
-    font-size: clamp(3rem 4rem 5rem);
     margin: .5rem;
     display: flex;
     justify-content: center;
@@ -110,18 +136,19 @@ main {
 .cardtext {
   text-align: center;
   margin: 1rem;
-
+  font-size: clamp(.5rem, 1.5rem, 2rem);
 }
 
 img {
     height: 100%;
     width: 100%;
     border-radius: 20px;
+    border: solid 5px white;
 }
 
 .cardTitle {
     grid-area: 1 / 2 / 1 / 4;
-    background-color: #5b0367;
+    font-size: clamp(.5rem, 1.3rem, 2rem);
 }
 
 .cardOne {
@@ -143,46 +170,24 @@ img {
    
 }
 
-/* Home Styles */
-
-.indexBody {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-}
-
-.headercontainer {
-    background-color: #5b0367;
-    opacity: 90%;
-    height: 20rem;
-    width: 40rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
-    border-radius: 20px;
-}
-
-.indexHead {
-    font-size: 300px,
-}
-
 /* Footer Styles */
 
 footer {
     background-color: #5b0367;
     color: white;
     padding: 1rem;
-    margin-top: auto; /* This pushes the footer to the bottom */
+    margin-top: auto; 
 }
 
 @media screen and (max-width: 768px) {
 
     .headercontainer {
-        font-size: 30px;
         height: 20rem;
         width: 30rem;
+    }
+
+    .indexHead {
+        font-size: 70px;
     }
 
     .cardTitle {
@@ -208,7 +213,7 @@ footer {
     .nav-list {
         position: fixed;
         left: 0;
-        top: -100%; /* Start off-screen above */
+        top: -100%; 
         background-color: #5b0367;
         width: 100%;
         flex-direction: column;
@@ -228,7 +233,7 @@ footer {
 }
 
 .nav-active {
-    top: 0; /* Slide down to top of page */
+    top: 0; 
 }
 
 @keyframes navLinkFade {
@@ -257,9 +262,12 @@ footer {
 @media screen and (max-width: 507px) {
 
     .headercontainer {
-        font-size: 25px;
         height: 20rem;
         width: 20rem;
+    }
+
+    .indexHead {
+        font-size: 50px;
     }
 
     .cardOne {
@@ -286,6 +294,10 @@ footer {
         font-size: 22px;
         height: 10rem;
         width: 17rem;
+    }
+
+    .indexHead {
+        font-size: 40px;
     }
 
 }
