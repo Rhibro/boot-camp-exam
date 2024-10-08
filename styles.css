@@ -170,6 +170,13 @@ img {
    
 }
 
+/* Gallery Styles */
+
+.imgCard {
+    margin: clamp(.5rem, 1rem, 1.5rem);
+}
+
+
 /* Footer Styles */
 
 footer {
