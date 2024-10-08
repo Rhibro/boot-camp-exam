@@ -63,9 +63,9 @@ a:hover {
     transition: all 0.1s ease;
 }
 
-main {
+.indexBody {
     flex-grow: 1;
-}
+} 
 
 /* Home Styles */
 
@@ -171,6 +171,13 @@ img {
 }
 
 /* Gallery Styles */
+
+.galleryBody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
 .imgCard {
     margin: clamp(.5rem, 1rem, 1.5rem);
@@ -298,7 +305,6 @@ footer {
 @media screen and (max-width: 400px) {
 
     .headercontainer {
-        font-size: 22px;
         height: 10rem;
         width: 17rem;
     }
