@@ -28,5 +28,6 @@ I began looking for pictures of dogs to inspire me
 - I made the adpotion dog cards interactive so they zoom a bit when you hover over them for a more interactive feel
 - I did WAVE and lighthouse tests on all the pages and everything came back very accessibile
 - I also added some extra meta tags for better SEO
+- I also made two branches working-branch and main 
 
 
