@@ -105,8 +105,8 @@ a:hover {
 }
 
 .gridcontainer {
-    min-height: 90%;
-    min-width: 90%;
+    /* min-height: 90%;
+    min-width: 90%; */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
